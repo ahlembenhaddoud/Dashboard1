@@ -1,0 +1,35 @@
+<mat-nav-list>
+    <div class="profile-card">
+<div class="header">
+    <mat-icon>person_outline</mat-icon><h2>Ahlem & Nourhene</h2>
+</div>
+<img src="assets/images/ahnour.jpg" alt="Entreprise tunisienne d'activité petroliere ">
+</div>
+     <mat-divider></mat-divider>
+
+     <h2 matSubheader>pages</h2>
+
+     <a mat-list-item  routerLinkActive="list-item-active" routerLink="/" >
+      <mat-icon>av_timer</mat-icon> Dashboard
+    </a>
+     <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts"><mat-icon>shopping_cart</mat-icon>Vente</a>
+     <a mat-list-item  routerLinkActive="list-item-active" routerLink="auth/registre" > <mat-icon>people</mat-icon>Tiere</a>
+     <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin"><mat-icon> directions_boat</mat-icon>Navire</a>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin">
+        <mat-icon>import_contacts</mat-icon>
+        Contacts
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>contact_phone</mat-icon>
+        Leads
+    </a>
+
+</mat-nav-list>
+
+

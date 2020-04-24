@@ -1,0 +1,25 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card  fxFlex="30">
+      <mat-toolbar color="primary"> SignIn</mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="myform" (ngSubmit)="InUser()">
+          <mat-form-field >
+            <mat-label>UserName</mat-label>
+            <input matInput type="email" placeholder="UserName"  formControlName="mail">
+            <div *ngIf="mail.touched && mail.invalid">
+              <small *ngIf="mail.errors.required" class="text-danger">Email is required<br></small>
+              <small *ngIf="mail.errors.minlength" class="text-danger">Email must contain two characters at least<br></small>
+              <small *ngIf="mail.errors.email" class="text-danger"> Email invalid @</small>
+            </div>
+          </mat-form-field>
+          <mat-form-field >
+              <mat-label>Password</mat-label>
+              <input matInput  type="password" placeholder="Password" formControlName="password" >
+              <div *ngIf="password.touched && password.invalid">
+                <small *ngIf="password.errors.required" class="text-danger">Password is required<br></small>
+                <small *ngIf="password.errors.minlength" class="text-danger">Password must contain 8 characters at least</small>
+              </div>
+            </mat-form-field>
+          <button mat-raised-button  type="submit" color="primary" (click)="login()" [disabled]="myform.invalid">Login</button>
+        </form>
+  </mat-card>
+</div>
